@@ -1,4 +1,3 @@
-
 name: deploy-auth
 
 on:
@@ -7,10 +6,10 @@ on:
       - master
     paths:
       - 'auth/**'
-      
+
 jobs:
   build:
-    runs-on: ubuntu-lateset
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: cd auth && docker build -t spacecoupe/auth .
